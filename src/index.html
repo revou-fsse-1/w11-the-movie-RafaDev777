@@ -3,9 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="/dist/output.css" rel="stylesheet" />
+    <!-- Adding Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="/src/assets/css/main.css" rel="stylesheet" />
   </head>
   <body>
-    <h1 class="text-3xl font-bold underline">Hello world!</h1>
+    <header></header>
+    <main class="flex justify-center items-center h-screen flex-col">
+      <div class="content-container flex-col flex max-w-sm">
+        <h1 class="">
+          The <br />
+          Movie <br />
+          Watchlist<br />
+        </h1>
+        <input
+          id="login-username"
+          class="bg-slate-300 py-2 rounded-xl pl-4 my-2 target:border-primary"
+          placeholder="Username"
+        />
+        <input
+          id="login-pwd"
+          class="bg-slate-300 py-2 rounded-xl pl-4 my-2"
+          placeholder="Password"
+        />
+        <button
+          id="login-btn"
+          class="bg-primary text-white rounded-2xl py-2 mt-6"
+        >
+          Login
+        </button>
+        <p class="mt-4">
+          You don't have an account?
+          <a class="text-primary font-bold">SignUp</a>
+        </p>
+      </div>
+    </main>
   </body>
 </html>
