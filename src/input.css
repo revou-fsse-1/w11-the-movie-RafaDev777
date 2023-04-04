@@ -4,7 +4,7 @@
     @apply text-6xl leading-normal font-display font-bold;
   }
   h2 {
-    @apply text-4xl tracking-widest;
+    @apply text-xl font-bold;
   }
 }
 @tailwind components;
