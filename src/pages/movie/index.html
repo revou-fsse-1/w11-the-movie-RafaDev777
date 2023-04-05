@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Adding Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="/src/assets/css/main.css" rel="stylesheet" />
+    <title>The Movie Watchlist - Dashboard</title>
+  </head>
+  <body>
+    <header class="flex-row flex justify-between items-center">
+      <div class="flex-1 lg:flex-none">
+        <h1 class="text-3xl">The<br />Movie<br />Watchlist</h1>
+      </div>
+      <div class="flex-none search-bar-wrapper relative mr-5 lg:mr-0">
+        <input
+          type="search"
+          id="search"
+          class="bg-slate-300 h-12 w-12 rounded-3xl pl-3 placeholder:text-center lg:w-[39rem]"
+          placeholder="🔍 Search a movie or a series"
+        />
+      </div>
+      <div class="flex-none watchlist-btn-wrapper">
+        <a
+          class="font-bold flex bg-slate-300 h-12 w-12 rounded-3xl items-center justify-center lg:w-48"
+          ><img
+            src="/src/assets/img/bookmark-icon.svg"
+            class="search-icon lg:mr-1.5"
+          /><span class="hidden lg:block">Watchlist</span></a
+        >
+      </div>
+    </header>
+    <main></main>
+  </body>
+</html>
