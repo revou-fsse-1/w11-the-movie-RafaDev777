@@ -12,10 +12,10 @@
       rel="stylesheet"
     />
     <link href="/src/assets/css/main.css" rel="stylesheet" />
-    <title>The Movie Watchlist - Dashboard</title>
+    <title>The Movie Watchlist - The Gray Man</title>
   </head>
-  <body>
-    <header class="flex-row flex justify-between items-center">
+  <body class="container mx-auto">
+    <header class="flex-row flex justify-between pt-10">
       <div class="flex-1 lg:flex-none">
         <h1 class="text-3xl">The<br />Movie<br />Watchlist</h1>
       </div>
@@ -37,8 +37,8 @@
         >
       </div>
     </header>
-    <main>
-      <div class="top-container flex flex-row justify-between mt-16">
+    <main class="">
+      <div class="top-container flex flex-row justify-between items-center mt-16">
         <h2 class="movie-title text-3xl lg:text-4xl">The Gray Man</h2>
         <div class="add-to-watchlist-btn-wrapper">
           <a
@@ -50,34 +50,36 @@
           >
         </div>
       </div>
-      <div class="bottom-container flex-wrap-reverse">
-        <div class="movie-info-container flex flex-row basis-1/2">
+      <div class="bottom-container w-full flex flex-row mt-6 flex-wrap-reverse">
+        <div class="movie-info-container flex flex-row gap-5 lg:basis-1/2">
           <img
             src="https://th.bing.com/th/id/OIP.KNfIqaD92jvecpbxNWWQ4wHaJ4?w=139&h=185&c=7&r=0&o=5&pid=1.7"
-            class="movie-info-image object-cover w-44 h-64 rounded-2xl"
+            class="hidden movie-info-image object-cover w-44 h-64 rounded-2xl lg:block"
           />
-          <div class="move-dscr-container">
-            <div class="movie-genre-container flex flex-row">
-              <p class="movie-genre border border-black rounded-2xl px-3 py-2">
+          <div class="move-dscr-container mt-14 lg:mt-0">
+            <div class="movie-genre-container flex flex-row gap-5">
+              <p class="movie-genre font-bold border border-black rounded-full px-4 py-2">
                 Action
               </p>
-              <p>Adventure</p>
+              <p  class="movie-genre font-bold border border-black rounded-full px-4 py-2">Adventure</p>
             </div>
-            <p>
+            <p class="movie-dscr mt-5">
               A thief who steals corporate secrets through the use of
               dream-sharing technology is given the inverse task of planting an
               idea into the mind of a C.E.O., but his tragic past may doom the
               project and his team to disaster.
             </p>
-            <p>IMDB Rating</p>
-            <p>⭐ 9.1<span>/10</span></p>
+            <p class="mt-12">IMDB Rating</p>
+            <p class="">⭐ 9.1<span class="font-normal text-xs text-gray-500">/10</span></p>
           </div>
-          <iframe
-            class="movie-trailer basis-1/2"
+        </div>
+        <div class="movie-trailer-container lg:basis-1/2 lg:flex-row-reverse lg:flex">
+        <iframe
+            class="movie-trailer rounded-2xl  w-full h-48 lg:h-72 lg:max-w-xl"
             src="https://www.youtube.com/embed/TcMBFSGVi1c"
             frameborder="0"
-          ></iframe>
-        </div>
+          ></iframe></div>
+        
       </div>
     </main>
   </body>
