@@ -27,6 +27,15 @@ export const createRatedMovieCard = (data) => {
   return ratedMovieCard;
 };
 
+export const createGenreComp = (genre) => {
+  let genreTab = document.createElement("p");
+  genreTab.className =
+    "movie-genre font-bold border border-black rounded-full px-4 py-2";
+  genreTab.innerHTML = `${genre}
+    `;
+  return genreTab;
+};
+
 export const selElemnt = (query) => {
   return document.querySelector(query);
 };
