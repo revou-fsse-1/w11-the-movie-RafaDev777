@@ -5,6 +5,18 @@ import {
 } from "./components.js";
 import { API_ENDPOINT } from "./constants.js";
 
+let CheckLogIn = localStorage.getItem("isLoggedIn");
+
+const isDenied = () => {
+  alert("ACCESS DENIED - Please Login to access!");
+  window.location.pathname = "/src/";
+};
+
+if (CheckLogIn === null) {
+  isDenied();
+  console.log("test");
+}
+
 //Currently Watching
 const getCurrWatch = async () => {
   try {
@@ -17,9 +29,19 @@ const getCurrWatch = async () => {
 
 const renderCurrWatch = async () => {
   let currWatchMovies = await getCurrWatch();
-  currWatchMovies.forEach((movie) => {
-    selElemnt(".crnt-watch-card-container").appendChild(createMovieCard(movie));
-  });
+  if (currWatchMovies.length === 0) {
+    selElemnt(".crnt-watch-card-container").innerHTML = `
+    <div class="error-msg-container flex flex-row gap-10 items-center">
+    <span class="text-[120px] font-bold">:(</span><p class="text-[60px] leading-tight">You haven't watch</br>any movie!</p>
+    </div>
+    `;
+  } else {
+    currWatchMovies.forEach((movie) => {
+      selElemnt(".crnt-watch-card-container").appendChild(
+        createMovieCard(movie)
+      );
+    });
+  }
 };
 
 renderCurrWatch();
@@ -36,11 +58,19 @@ const getSuggested = async () => {
 
 const renderSuggested = async () => {
   let suggestedMovies = await getSuggested();
-  suggestedMovies.forEach((movie) => {
-    selElemnt(".sgtd-watch-card-container").appendChild(
-      createRatedMovieCard(movie)
-    );
-  });
+  if (suggestedMovies.length === 0) {
+    selElemnt(".sgtd-watch-card-container").innerHTML = `
+    <div class="error-msg-container flex flex-row gap-10 items-center">
+    <span class="text-[120px] font-bold">:(</span><p class="text-[60px] leading-tight">We can't give</br>any movie suggestion yet!</p>
+    </div>
+    `;
+  } else {
+    suggestedMovies.forEach((movie) => {
+      selElemnt(".sgtd-watch-card-container").appendChild(
+        createRatedMovieCard(movie)
+      );
+    });
+  }
 };
 
 renderSuggested();
@@ -57,9 +87,24 @@ const getPrevWatch = async () => {
 
 const renderPrevMovie = async () => {
   let prevMovies = await getPrevWatch();
-  prevMovies.forEach((movie) => {
-    selElemnt(".prvs-watch-card-container").appendChild(createMovieCard(movie));
-  });
+  if (prevMovies.length === 0) {
+    selElemnt(".prvs-watch-card-container").innerHTML = `
+    <div class="error-msg-container flex flex-row gap-10 items-center">
+    <span class="text-[120px] font-bold">:(</span><p class="text-[60px] leading-tight">You haven't watch<br/>any movie yet!</p>
+    </div>
+    `;
+  } else {
+    prevMovies.forEach((movie) => {
+      selElemnt(".prvs-watch-card-container").appendChild(
+        createMovieCard(movie)
+      );
+    });
+  }
 };
 
 renderPrevMovie();
+
+//Watchlist page button
+selElemnt(".watchlist-btn").addEventListener("click", () => {
+  window.location.pathname = "/src/pages/watchlist/";
+});

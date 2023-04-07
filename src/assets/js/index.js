@@ -48,7 +48,7 @@ const signIn = async () => {
       break;
     case checkCredential === undefined:
       alert("success");
-      localStorage.setItem("username", username);
+      localStorage.setItem("isLoggedIn", username);
       window.location.href = "./pages/dashboard/";
       break;
   }
