@@ -1,2 +1,3 @@
-export const USER_API_ENDPOINT = '';
-export const API_ENDPOINT = '';
+export const API_ENDPOINT = (point) => {
+  return `http://localhost:3000/${point}`;
+};
