@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,32 +13,43 @@
     />
     <link href="/src/assets/css/main.css" rel="stylesheet" />
     <title>The Movie Watchlist - Watchlist</title>
-</head>
-<body class="container mx-auto">
+  </head>
+  <body class="container mx-auto">
     <header class="flex-row flex justify-between pt-10 flex-wrap">
-        <div class="flex-1 flex-row flex basis-full justify-between items-center lg:flex-none">
-          <h1 class="text-3xl">The<br />Movie<br />Watchlist</h1>
-          <a class="bg-slate-300 rounded-3xl h-12 text-3xl text-center pt-1.5 w-12 font-bold lg:hidden">+</a>
-        </div>
-        <div class="flex-1 search-bar-wrapper mt-5 lg:flex-none lg:mt-0">
-          <input
-            type="search"
-            id="search"
-            class="bg-slate-300 h-12 w-full rounded-3xl pl-3 placeholder:text-center lg:w-[39rem]"
-            placeholder="🔍 Search a movie or a series"
-          />
-        </div>
-        <div class="flex-none watchlist-btn-wrapper hidden lg:block ">
-          <a
-            class="font-bold bg-slate-300 h-12 w-12 rounded-3xl items-center justify-center flex lg:w-48"
-            ><img
-              src="/src/assets/img/bookmark-icon.svg"
-              class="search-icon lg:mr-1.5"
-            /><span class="hidden lg:block">Watchlist</span></a
-          >
-        </div>
-      </header>
-      <main class="gap-5">
-      </main>
-</body>
+      <div
+        class="flex-1 flex-row flex basis-full justify-between items-center lg:flex-none"
+      >
+        <h1 class="text-3xl">The<br />Movie<br />Watchlist</h1>
+        <a
+          class="bg-slate-300 rounded-3xl h-12 text-3xl text-center pt-1.5 w-12 font-bold lg:hidden"
+          >+</a
+        >
+      </div>
+      <div class="flex-1 search-bar-wrapper mt-5 lg:flex-none lg:mt-0">
+        <input
+          type="search"
+          id="search"
+          class="bg-slate-300 h-12 w-full rounded-3xl pl-3 placeholder:text-center lg:w-[39rem]"
+          placeholder="🔍 Search a movie or a series"
+        />
+      </div>
+      <div class="flex-none watchlist-btn-wrapper hidden lg:block">
+        <a
+          class="font-bold bg-slate-300 h-12 w-12 rounded-3xl items-center justify-center flex lg:w-48"
+          ><img
+            src="/src/assets/img/bookmark-icon.svg"
+            class="search-icon lg:mr-1.5"
+          /><span class="hidden lg:block">Watchlist</span></a
+        >
+      </div>
+    </header>
+    <main>
+      <div class="flex justify-center">
+        <div
+          class="watchlist-movie-container mx-auto flex flex-wrap gap-y-5 gap-x-5 mt-14 lg:max-w-[80%]"
+        ></div>
+      </div>
+    </main>
+    <script type="module" src="/src/assets/js/watchlist.js"></script>
+  </body>
 </html>
