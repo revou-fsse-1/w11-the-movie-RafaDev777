@@ -9,7 +9,7 @@ let CheckLogIn = localStorage.getItem("isLoggedIn");
 
 const isDenied = () => {
   alert("ACCESS DENIED - Please Login to access!");
-  window.location.pathname = "/src/";
+  window.location.pathname = "/";
 };
 
 if (CheckLogIn === null) {
